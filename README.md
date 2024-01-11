@@ -22,6 +22,10 @@ Clone the repository using the following command:
 
 - Python version used: 3.10
 
+Teacher's Project:
+
+`https://github.com/parfeniukink/hillel_2024`
+
 ### Contributing
 
 Contributions to this project are welcome. If you find any issues or have suggestions for improvements, feel free to open an issue or submit a pull request.
