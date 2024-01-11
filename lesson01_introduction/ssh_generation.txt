@@ -1,0 +1,28 @@
+github@ubuntu:~$ cd ~/.ssh
+github@ubuntu:~$ grep id_rsa
+github@ubuntu:~/.ssh$ ssh-keygen -t rsa -b 4096 -C "email@email.com"
+Generating public/private rsa key pair.
+Enter file in which to save the key (/home/ubuntu/.ssh/id_rsa):
+Enter passphrase (empty for no passphrase):
+Your identification has been saved in /home/ubuntu/.ssh/id_rsa
+Your public key has been saved in /home/ubuntu/.ssh/id_rsa.pub
+The key fingerprint is: SHA256:g7RTuw9S+...
+The key's randomart image is:
++---[RSA 3072]----+
+|  ..Bo+.+o.. |
+|. *.= +E . . |
+| ...+ .. . . |
+| +.. ...+ o  |
+|  B o  ++  S |
+| o . * = o + |
+| o  B.oo  .  |
+|   = oo  +   |
+|   .o .o .   |
++----[SHA256]-----+
+
+
+The purpose of the parameters used with the GitHub ssh-keygen command are as follows:
+
+    The -o flag forces the tool to generate SSH keys with the OpenSSH format
+    The -t flag specifies they type of SSH keys to create
+    The -C flag allows for comments that get added as metadata at the end of the public key
