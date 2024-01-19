@@ -11,6 +11,7 @@ class Price:
 
     # TODO: complete this class
 
+
 # phone = 1000 USD
 # food = 10 EUR
 # total = phone + food
