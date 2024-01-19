@@ -11,7 +11,9 @@ jobs:
         with:
           python-version: '3.11'
       - name: Install dependencies
-        run: pip install black ruff isort mypy
+        run: |
+          python -m pip install black ruff isort
+          python -m pip install pydantic mypy
       - name: Run formatters
         run: python -m black --check . && python -m isort --check .
       - name: Run linter
