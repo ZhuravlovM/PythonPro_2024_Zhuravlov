@@ -9,7 +9,6 @@ class Price:
         self.currency = currency
         self.value = value
 
-    # TODO: complete this class
 
 # phone = 1000 USD
 # food = 10 EUR
