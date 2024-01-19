@@ -17,4 +17,4 @@ jobs:
       - name: Run linter
         run: python -m ruff .
       - name: Run static type checker
-        run: python - m mypy .
+        run: python -m mypy .
