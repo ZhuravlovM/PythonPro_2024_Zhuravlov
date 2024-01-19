@@ -1,0 +1,6 @@
+https://snyk.io/advisor/ - package quality evaluation
+https://github.com/psf/black - Python code formatter
+
+https://flake8.pycqa.org/en/latest/ - linter
+https://pypi.org/project/pylint/
+https://github.com/astral-sh/ruff
