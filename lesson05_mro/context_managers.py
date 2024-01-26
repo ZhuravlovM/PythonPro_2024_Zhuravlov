@@ -4,7 +4,7 @@ src_root = Path(__file__).parent
 
 filename = src_root / "team.txt"
 
-'''
+"""
 file = open(file=filename, mode="rt")
 lines = file.read()
 file.close()
@@ -15,7 +15,7 @@ print(lines)
 with open(src_root / "team.txt", "rt") as file:
     lines = file.read()
     print(lines)
-'''
+"""
 
 
 class Factory:

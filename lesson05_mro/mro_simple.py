@@ -6,5 +6,5 @@ class B(A):
     pass
 
 
-class C(B,A):
+class C(B, A):
     pass
