@@ -5,8 +5,8 @@
 # flat => str, bytes
 # container => list[[], ()]
 
-import string
 import random
+import string
 
 
 class Product:
