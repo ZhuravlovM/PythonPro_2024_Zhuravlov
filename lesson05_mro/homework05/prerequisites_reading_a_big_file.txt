@@ -1,0 +1,8 @@
+Homework5 task:
+1. Download rockyou.txt file
+2. Create an application that allows you to input the string
+3. Then, the application goes through the whole file and checks if the requested string exists in each line
+4. Then, it shows to user how many lines have been found during the search process
+
+Additional:
+The file is quite huge, so it should be added to the .gitignore
