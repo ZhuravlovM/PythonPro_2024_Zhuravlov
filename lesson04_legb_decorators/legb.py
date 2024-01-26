@@ -8,7 +8,7 @@ def change_john_to_marry(name: str):
 
 
 def parabola(x: int) -> int:
-    result = x ** 2
+    result = x**2
     return result
 
 

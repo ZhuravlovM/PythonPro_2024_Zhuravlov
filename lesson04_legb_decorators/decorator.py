@@ -14,6 +14,7 @@ def error_handler(func):
             print("Something went wrong")
         else:
             return result
+
     return inner
 
 
