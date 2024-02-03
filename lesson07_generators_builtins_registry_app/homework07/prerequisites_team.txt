@@ -1,0 +1,5 @@
+Complete the task from the classwork to manage the "team":
+
+1. Add a new function: `player_update` which updates the player by its number
+2. Update the `player_add` function so for now the application validate
+   if the user with the same number already exists in a team
