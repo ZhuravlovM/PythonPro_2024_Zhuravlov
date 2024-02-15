@@ -13,7 +13,7 @@ class Price:
         self.conversion_rates: dict = conversion_rates
 
     def __str__(self):
-        return f"{self.value},{self.currency}"
+        return f"{self.value}, {self.currency}"
 
     def convert_to(self, target_currency: str) -> "Price":
         if self.currency == target_currency:
