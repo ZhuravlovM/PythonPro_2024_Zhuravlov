@@ -1,0 +1,17 @@
+Create a class Price (for more details take a look at the end of Lesson 9)
+
+  class Price:
+    def __init__(self, value: int, currency: str) -> None:
+      self.value: int = value
+      self.currency: str = currency
+
+Acceptance criteria:
+    If I create 2 instances of a Price class I want to do operations between them:
+    add prices with the same currency
+    do a subtraction of prices with the same currency
+
+* Additional: operations between prices with different currencies:
+    If price instances' currencies are different I want to apply a middle conversion
+    CHF is a middle currency
+    P.S. Middle conversion is described at the end of Lesson 9
+    The resulting price must have a currency of the price that is on the left
