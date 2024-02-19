@@ -1,0 +1,29 @@
+The example from the lesson with exchange rates must be finished
+    The convert function is separate from the Price class
+    The convert() function claims the data from the external resource (alphavantage)
+
+Your personal Alphavantage API Key is claimed from 🔗 HERE: https://www.alphavantage.co/support/#api-key
+
+Since each conversion triggers the external API request I would like you to add logging for each call to the Alphavantage
+    Logging means that you have the next file in your folder: logs.json
+    Read about JSON 🔗HERE: https://www.w3schools.com/whatis/whatis_json.asp
+    The logs.json structure is next:
+
+"results": [
+    {...},
+    {...},
+    ...
+]
+
+If you compare the structure of the JSON file to Python data structures you have ARRAYS instead of LISTS and OBJECTS instead of DICTS.
+So out of that: it has the results ARRAY on the top level which consists of OBJECTS
+After the request has returned some response I want this ARRAY in the file to be augmented with new data of the next structure:
+
+{
+  "currency_from": ...,
+  "currency_to": ...,
+  "rate": ...,
+  "timestamp": ...,
+}
+
+A time stamp could be in any representation you want but make sure that the initial value is taken from the datetime.now()
