@@ -9,23 +9,26 @@ class SocialChannel(ABC):
         self.followers = followers
 
     @abstractmethod
-    def post(self, message: str) -> None:
+    def post(self, message: str, timestamp: datetime) -> None:
         pass
 
 
 class YoutubeChannel(SocialChannel):
-    def post(self, message: str) -> None:
-        print(f"Posting to YouTube: {message}")
+    def post(self, message: str, timestamp: datetime) -> None:
+        if timestamp <= datetime.now():
+            print(f"Posting to YouTube: {message}")
 
 
 class FacebookChannel(SocialChannel):
-    def post(self, message: str) -> None:
-        print(f"Posting to Facebook: {message}")
+    def post(self, message: str, timestamp: datetime) -> None:
+        if timestamp <= datetime.now():
+            print(f"Posting to Facebook: {message}")
 
 
 class TwitterChannel(SocialChannel):
-    def post(self, message: str) -> None:
-        print(f"Posting to Twitter: {message}")
+    def post(self, message: str, timestamp: datetime) -> None:
+        if timestamp <= datetime.now():
+            print(f"Posting to Twitter: {message}")
 
 
 class Post:
@@ -34,16 +37,10 @@ class Post:
         self.timestamp = timestamp
 
 
-def post_a_message(channel: SocialChannel, message: str) -> None:
-    channel.post(message)
-
-
 def process_schedule(posts: List[Post], channels: List[SocialChannel]) -> None:
-    current_time = datetime.now()
     for post in posts:
-        if post.timestamp <= current_time:
-            for channel in channels:
-                post_a_message(channel, post.message)
+        for channel in channels:
+            channel.post(post.message, post.timestamp)
 
 
 youtube_channel = YoutubeChannel("youtube", 90)
