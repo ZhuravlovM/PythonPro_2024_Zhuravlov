@@ -16,7 +16,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-create_random_string: Callable[[int], str] = lambda size: "".join(      # NOQA
+create_random_string: Callable[[int], str] = lambda size: "".join(  # NOQA
     [random.choice(string.ascii_letters) for _ in range(size)]
 )
 
