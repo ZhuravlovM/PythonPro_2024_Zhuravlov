@@ -1,0 +1,16 @@
+Repeat the frontend from the last example that communicates with the Alphavantage API for claiming the rate.
+In the lesson, we’ve done the communication for hardcoded values but currently,
+you have to unify the interface and make it work for all the currencies.
+
+Requirements:
+
+- The request HTTP method is: POST
+
+- Provide the source and destination currencies in the body for using those values on the backend’s side
+for claiming the requested exchange rate.
+
+- The exchange rate must be displayed on each button press.
+
+- To not abuse the external API, please add the next functionality: if a user has called the API last 10 seconds
+the backend server returns the cached value instead of requesting a new one.
+The cached value could be a global variable in python.

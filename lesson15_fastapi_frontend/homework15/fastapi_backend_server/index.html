@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Exchange Rate</title>
+</head>
+<body>
+    <h1>Currency Exchange Rate</h1>
+    <div>
+        <label for="sourceCurrency">Source Currency:</label>
+        <input type="text" id="sourceCurrency" name="sourceCurrency" placeholder="Enter source currency">
+    </div>
+    <div>
+        <label for="destinationCurrency">Destination Currency:</label>
+        <input type="text" id="destinationCurrency" name="destinationCurrency" placeholder="Enter destination currency">
+    </div>
+    <button id="fetchExchangeRate">Fetch Exchange Rate</button>
+    <div id="exchangeRate"></div>
+
+    <script>
+        document.getElementById("fetchExchangeRate").addEventListener("click", async () => {
+            const sourceCurrency = document.getElementById("sourceCurrency").value;
+            const destinationCurrency = document.getElementById("destinationCurrency").value;
+
+            try {
+                const response = await fetch("http://localhost:8000/currency-exchange", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({
+                        source_currency: sourceCurrency,
+                        destination_currency: destinationCurrency
+                    })
+                });
+                const data = await response.json();
+                document.getElementById("exchangeRate").innerText = `Exchange Rate: ${data.exchange_rate}`;
+            } catch (error) {
+                console.error("Error fetching exchange rate:", error);
+                document.getElementById("exchangeRate").innerText = "Error fetching exchange rate. Please try again later.";
+            }
+        });
+    </script>
+</body>
+</html>
