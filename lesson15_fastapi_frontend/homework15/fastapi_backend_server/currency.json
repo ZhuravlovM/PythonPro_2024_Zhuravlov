@@ -1,0 +1,16 @@
+{
+  "results": [
+    {
+      "currency_from": "USD",
+      "currency_to": "EUR",
+      "rate": "0.91780000",
+      "timestamp": "2024-03-16 16:35:33"
+    },
+    {
+      "currency_from": "USD",
+      "currency_to": "EUR",
+      "rate": "0.91780000",
+      "timestamp": "2024-03-16 16:35:49"
+    }
+  ]
+}
